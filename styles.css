@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 * {
     box-sizing: border-box;
     color: #d3d3d3;
@@ -23,6 +25,7 @@ html {
     border: 1px solid #D3D3D3;
     border-radius: 6px;
     font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
 }
 .buttons {
     display: grid;
@@ -30,12 +33,13 @@ html {
     gap: 4px;
     margin: 4px;
     grid-auto-rows: minmax(60px, auto);
+    font-family: 'Varela Round', sans-Serif;
 }
 .buttons > div {
     padding-top: 15px;
     text-align: center;
     border-radius: 6px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .digit {
     background-color:rgb(10, 10, 10);
