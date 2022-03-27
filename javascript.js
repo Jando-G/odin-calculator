@@ -46,6 +46,11 @@ document.getElementById("clear").addEventListener('click', () => {
     operation = "";
 })
 
+document.getElementById("backspace").addEventListener('click', () => {
+    if(!isNaN(display.innerHTML.slice(-1)) && display.innerHTML.slice(-1) != " ")
+    display.innerHTML = display.innerHTML.slice(0, -1);
+})
+
 document.querySelectorAll(".digit").forEach(digit => {
     digit.addEventListener('click', e => {
         if(e.target.innerHTML !== ".") {
@@ -59,7 +64,7 @@ document.querySelectorAll(".digit").forEach(digit => {
 
 document.querySelectorAll(".operand").forEach(operand => {
     operand.addEventListener('click', e =>{
-        if(!operation) {
+        if(!operation && display.innerHTML) {
         firstvalue = display.innerHTML;
         operation = operand.innerHTML;
         display.innerHTML += " " + operand.innerHTML + " ";
